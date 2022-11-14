@@ -4,13 +4,10 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
 public class PricerTest {
 
@@ -49,7 +46,7 @@ public class PricerTest {
 
 
     @Test
-    public void canGetCostInEuros() throws Exception {
+    public void canGetCostInEuros(){
         Pricer pricer = new Pricer();
 
         int costInCents = 1006;
@@ -57,11 +54,11 @@ public class PricerTest {
         String expectedPrice = "10.06" + pricer.EURO;
         String actualPrice = pricer.getPriceInEuros(costInCents);
 
-        assertTrue(expectedPrice.equals(actualPrice));
+        assertEquals(expectedPrice, actualPrice);
     }
 
     @Test
-    public void canGetTotalCostGivenAListOfItems() throws Exception {
+    public void canGetTotalCostGivenAListOfItems(){
         Pricer pricer = new Pricer();
 
         List<Item> itemList = new ArrayList<>();
@@ -71,11 +68,11 @@ public class PricerTest {
         String expectedPrice = "8.00" + pricer.EURO;
         String actualPrice = pricer.getStringTotalPrice(itemList);
 
-        assertTrue(expectedPrice.equals(actualPrice));
+        assertEquals(expectedPrice, actualPrice);
     }
 
     @Test
-    public void canGetTotalCostEvenWhenItemIsNotInHashMap() throws Exception {
+    public void canGetTotalCostEvenWhenItemIsNotInHashMap(){
         Pricer pricer = new Pricer();
 
         List<Item> itemList = new ArrayList<>();

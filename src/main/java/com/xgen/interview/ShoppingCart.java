@@ -11,7 +11,6 @@ import static com.xgen.interview.Item.getItemStringFormatWithPriceFirst;
  * Please write a replacement
  */
 public class ShoppingCart implements IShoppingCart {
-    HashMap<String, Integer> contents = new HashMap<>();
     Pricer pricer;
     List<Item> itemsInOrder = new ArrayList<>();
     Format format = Format.DEFAULT_FORMAT;

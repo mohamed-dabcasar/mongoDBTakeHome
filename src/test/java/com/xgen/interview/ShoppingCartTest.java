@@ -1,10 +1,6 @@
 package com.xgen.interview;
 
-import com.xgen.interview.Pricer;
-import com.xgen.interview.ShoppingCart;
-import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.ExpectedException;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
